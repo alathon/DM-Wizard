@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.awesome.turtlenecksandgotos.dm_1.0.0.v20120712.jar" id="com.awesome.turtlenecksandgotos.dm" version="1.0.0.v20120712">
+      <category name="Programming Languages"/>
+   </feature>
+   <category-def name="Programming Languages" label="Programming Languages">
+      <description>
+         Tools to allow development with specific languages, such as Java and C++
+      </description>
+   </category-def>
+</site>

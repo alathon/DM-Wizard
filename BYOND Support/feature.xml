@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.awesome.turtlenecksandgotos.dm"
+      label="BYOND Support"
+      version="1.0.0.v20120712"
+      provider-name="Awesomeware">
+
+   <description url="http://awesomeware.org">
+      Provides BYOND games development support to Eclipse.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <url>
+      <update label="BYOND Update Site" url="http://byond.awesomeware.org/eclipse/updates"/>
+   </url>
+
+</feature>

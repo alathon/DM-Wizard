@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.awesomeware.turtlenecksanfgotos.dm.category.wizards"
+            name="BYOND">
+      </category>
+      <wizard
+            category="com.awesomeware.turtlenecksanfgotos.dm.category.wizards"
+            class="com.awesomeware.org.turtlenecksandgotos.dm.code.wizards.NewBYONDProject"
+            id="com.awesomeware.org.turtlenecksandgotos.dm.code.wizard.new.project"
+            name="New BYOND Project"
+            project="true">
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="com.awesomeware.turtlenecksanfgotos.dm.category.wizards"
+            class="com.awesomeware.org.turtlenecksandgotos.dm.code.wizards.NewDMFile"
+            id="com.awesomeware.org.turtlenecksandgotos.dm.code.wizard.new.dmfile"
+            name="New DM File">
+      </wizard>
+   </extension>
+   <extension
+         id="com.awesomeware.turtlenecksandgotos.dm.nature"
+         name="BYOND"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.awesomeware.turtlenecksandgotos.dm.nature.BYONDNature">
+         </run>
+      </runtime>
+      <builder
+            id="com.awesomeware.turtlenecksandgotos.dm.builder">
+      </builder>
+      <content-type
+            id="com.awesomeware.turtlenecksandgotos.content.dmfile">
+      </content-type>
+   </extension>
+   <extension
+         id="com.awesomeware.turtlenecksandgotos.dm.builder"
+         name="BYOND Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            callOnEmptyDelta="false"
+            hasNature="true"
+            isConfigurable="false"
+            supportsConfigurations="false">
+         <run
+               class="com.awesomeware.turtlenecksandgotos.dm.nature.BYONDBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            describer="com.awesomeware.turtlenecksandgotos.content.DMFileDescriber"
+            file-extensions="dm"
+            id="com.awesomeware.turtlenecksandgotos.content.dmfile"
+            name="DM File"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.awesomeware.turtlenecksandgotos.prefs.CompilerPreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
