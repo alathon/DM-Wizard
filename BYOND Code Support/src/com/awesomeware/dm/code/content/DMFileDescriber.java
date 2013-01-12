@@ -1,4 +1,4 @@
-package com.awesomeware.turtlenecksandgotos.content;
+package com.awesomeware.dm.code.content;
 
 public class DMFileDescriber {
 

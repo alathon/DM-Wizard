@@ -1,4 +1,4 @@
-package com.awesomeware.org.turtlenecksandgotos.dm.code.wizards;
+package com.awesomeware.dm.code.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;

@@ -1,4 +1,4 @@
-package com.awesomeware.turtlenecksandgotos.dm.nature;
+package com.awesomeware.dm.nature;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectNature;

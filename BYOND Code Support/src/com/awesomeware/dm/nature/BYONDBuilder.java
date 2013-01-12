@@ -1,4 +1,4 @@
-package com.awesomeware.turtlenecksandgotos.dm.nature;
+package com.awesomeware.dm.nature;
 
 import java.util.Map;
 

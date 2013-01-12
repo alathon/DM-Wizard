@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.awesome.turtlenecksandgotos.dm"
+      id="com.awesome.dm"
       label="BYOND Support"
       version="1.0.0.v20120712"
       provider-name="Awesomeware">
@@ -20,5 +20,19 @@
    <url>
       <update label="BYOND Update Site" url="http://byond.awesomeware.org/eclipse/updates"/>
    </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+   </requires>
+
+   <plugin
+         id="com.awesomeware.dm.code"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

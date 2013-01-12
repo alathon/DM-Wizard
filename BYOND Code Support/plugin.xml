@@ -2,44 +2,46 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
+         id="com.awesomeware.dm.wizards"
+         name="BYOND"
          point="org.eclipse.ui.newWizards">
       <category
-            id="com.awesomeware.turtlenecksanfgotos.dm.category.wizards"
+            id="com.awesomeware.dm.wizards.category"
             name="BYOND">
       </category>
       <wizard
-            category="com.awesomeware.turtlenecksanfgotos.dm.category.wizards"
-            class="com.awesomeware.org.turtlenecksandgotos.dm.code.wizards.NewBYONDProject"
-            id="com.awesomeware.org.turtlenecksandgotos.dm.code.wizard.new.project"
+            category="com.awesomeware.dm.wizards.category"
+            class="com.awesomeware.dm.code.wizards.NewBYONDProject"
+            id="com.awesomeware.dm.wizards.new.project"
             name="New BYOND Project"
             project="true">
       </wizard>
       <wizard
             canFinishEarly="true"
-            category="com.awesomeware.turtlenecksanfgotos.dm.category.wizards"
-            class="com.awesomeware.org.turtlenecksandgotos.dm.code.wizards.NewDMFile"
-            id="com.awesomeware.org.turtlenecksandgotos.dm.code.wizard.new.dmfile"
+            category="com.awesomeware.dm.wizards.category"
+            class="com.awesomeware.dm.code.wizards.NewDMFile"
+            id="com.awesomeware.dm.wizard.new.dmfile"
             name="New DM File">
       </wizard>
    </extension>
    <extension
-         id="com.awesomeware.turtlenecksandgotos.dm.nature"
+         id="com.awesomeware.dm.nature"
          name="BYOND"
          point="org.eclipse.core.resources.natures">
       <runtime>
          <run
-               class="com.awesomeware.turtlenecksandgotos.dm.nature.BYONDNature">
+               class="com.awesomeware.dm.nature.BYONDNature">
          </run>
       </runtime>
       <builder
-            id="com.awesomeware.turtlenecksandgotos.dm.builder">
+            id="com.awesomeware.dm.builder">
       </builder>
       <content-type
-            id="com.awesomeware.turtlenecksandgotos.content.dmfile">
+            id="com.awesomeware.dm.content.dmfile">
       </content-type>
    </extension>
    <extension
-         id="com.awesomeware.turtlenecksandgotos.dm.builder"
+         id="com.awesomeware.dm.builder"
          name="BYOND Builder"
          point="org.eclipse.core.resources.builders">
       <builder
@@ -48,25 +50,44 @@
             isConfigurable="false"
             supportsConfigurations="false">
          <run
-               class="com.awesomeware.turtlenecksandgotos.dm.nature.BYONDBuilder">
+               class="com.awesomeware.dm.nature.BYONDBuilder">
          </run>
       </builder>
    </extension>
    <extension
+         id="com.awesomeware.dm.content"
+         name="BYOND Content"
          point="org.eclipse.core.contenttype.contentTypes">
       <content-type
-            describer="com.awesomeware.turtlenecksandgotos.content.DMFileDescriber"
+            describer="com.awesomeware.dm.code.content.DMFileDescriber"
             file-extensions="dm"
-            id="com.awesomeware.turtlenecksandgotos.content.dmfile"
+            id="com.awesomeware.dm.content.dmfile"
             name="DM File"
             priority="normal">
       </content-type>
    </extension>
    <extension
+         id="com.awesomeware.dm.preferences"
+         name="BYOND Preferences"
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="com.awesomeware.turtlenecksandgotos.prefs.CompilerPreferenceInitializer">
+            class="com.awesomeware.dm.code.preferences.CompilerPreferenceInitializer">
       </initializer>
+   </extension>
+   <extension
+         id="com.awesomeware.dm.preferences.pages"
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.awesomeware.dm.code.preferences.pages.general"
+            class="com.awesomeware.dm.code.preferences.pages.CompilerPreferencePage"
+            id="com.awesomeware.dm.code.preferences.pages.compiler"
+            name="Compiler">
+      </page>
+      <page
+            class="com.awesomeware.dm.code.preferences.pages.BYONDPreferencePage"
+            id="com.awesomeware.dm.code.preferences.pages.general"
+            name="BYOND">
+      </page>
    </extension>
 
 </plugin>

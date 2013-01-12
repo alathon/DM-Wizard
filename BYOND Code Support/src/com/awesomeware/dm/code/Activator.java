@@ -1,4 +1,4 @@
-package com.awesomeware.turtlenecksandgotos.dm.code;
+package com.awesomeware.dm.code;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;

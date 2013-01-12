@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: BYOND Code Support
-Bundle-SymbolicName: com.awesomeware.turtlenecksandgotos.dm.code;singleton:=true
+Bundle-SymbolicName: com.awesomeware.dm.code;singleton:=true
 Bundle-Version: 1.0.0.v20120712
-Bundle-Activator: com.awesomeware.turtlenecksandgotos.dm.code.Activator
+Bundle-Activator: com.awesomeware.dm.code.Activator
 Bundle-Vendor: Awesomeware
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
